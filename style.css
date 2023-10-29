@@ -28,16 +28,26 @@
     cursor: pointer;
     border: 1px solid black;
 }
+.dline{
+    /* width: 0px ; */
+    height: 50%;
+    border: 1px solid gray;
+    display: none;
+}
 .middle-nav-section{
+    width: 40%;
+    justify-content: space-evenly;
    background-color: #FFFFFF;
     display: flex;
    align-items: center;
+   border-radius: 8px;
    box-shadow: 0px 0px 3px rgb(139, 138, 138);
+   padding: 2px;
 }
 .middle-nav-section>div{
-    gap: 15px;
-    padding: 10px;
-    border-radius: 10PX;
+   
+    padding: 8px;
+    border-radius: 8PX;
     color: #605a5a;
 }
 .middle-nav-section>div:hover{
@@ -49,7 +59,7 @@
     font-size: 6px;
     color: gray;
     text-align: right;
-    color: #C5C5C5;
+   
 }
 .right-nav-section{
      display: flex;
@@ -158,63 +168,83 @@
 .left-side-box{
     display: flex;
     position: fixed;
+    align-items: center;
+    
    bottom: 10px;
    /* box-shadow: 0px 0px 3px rgb(139, 138, 138); */
    color: #7B7B7B;
 }
 .left-footer{
     display: flex;
-    border: 1px solid #D7D7D7;
-   padding: 8px;
+    border: 1px solid black;
+    height: 25px;
    margin-inline: 10px;
     border-radius: 5px;
-   
+   padding-inline: .5rem;
+   align-items: center;
+   padding-top: 3px;
 }
 .left-footer:hover{
     cursor: pointer;
 }
 .second-left{
    display: flex;
-   border: 1px solid#D7D7D7;
-   padding: 8px;
+   border: 1px solid black;
+   height: 25px;
    border-radius: 5px;
+   padding-inline: .5rem;
+   align-items: center;
+  
 }
 .minus{
     border-right: 2px solid gray;
-    
+    display: flex;
+    height: 29px;
     margin-right: 5px;
     padding-right: 5px;
+    align-items: center;
 }
 
 .plus{
-    border-left: 2px solid gray;
+    display: flex;
+    height: 29px;
+    border-left: 1px solid gray;
     margin-left: 7px;
     padding-left: 3px;
+    align-items: center;
 }
 
 .left-arrow{
-    border-right: 2px solid gray;
-    padding-right: 5px;
+    border-right: 1px solid gray;
+    height: 29px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .right-arrow{
-    padding-left: 5px;
+    height: 29px;
+    padding-left: 3px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 .right-side-box{
     display: flex;
     font-size: 15px;
-    padding: 8px;
+    padding: 5px;
     position: fixed;
     bottom: 10px;
     right: 10px;
     border-radius: 5px;
-    /* box-shadow: 0px 0px 3px rgb(139, 138, 138); */
+   
    
 }
 .right-side-box:hover{
     cursor: pointer;
 }
 .check{
-    padding: 8px;
+    padding: 5px;
     color: #7B7B7B;
 }
 .check:hover{
@@ -225,8 +255,8 @@
 
 }
 .question{
-    padding: 8px;
-    border: 1px solid #D7D7D7;
+    padding: 5px;
+    border: 1px solid black;
     margin-left: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 3px rgb(139, 138, 138);

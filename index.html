@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excalidraw</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="canvas.css">
     <link
       rel="icon"
       href="https://docs.excalidraw.com/img/logo.svg"
@@ -26,42 +27,41 @@
       <div class="left-menu">
         <i class="fa-solid fa-bars"></i>
       </div>
-      <div class="middle-nav-section">
-        <div class="logo">
+      <div class="middle-nav-section"  >
+        <div class="logo" id="lock" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-lock"></i>
         </div>
-
-        <div class="logo">
+        <div class="logo" id="freehnd" onclick="iconButtonClicked(this)">
           <i class="fa-regular fa-hand"></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="arrow-pntr" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-arrow-pointer"><p class="smallp">1</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="square" onclick="iconButtonClicked(this)">
           <i class="fa-regular fa-square"><p class="smallp">2</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="diamond" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-diamond"><p class="smallp">3</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="circle" onclick="iconButtonClicked(this)">
           <i class="fa-regular fa-circle"><p class="smallp">4</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="right-arrow" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-arrow-right"><p class="smallp">5</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="minusBtn" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-minus"><p class="smallp">6</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="pencil" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-pencil"><p class="smallp">7</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="letter" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-a"><p class="smallp">8</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="imgBtn" onclick="iconButtonClicked(this)">
           <i class="fa-regular fa-image"><p class="smallp">9</p></i>
         </div>
-        <div class="logo">
+        <div class="logo" id="eraser" onclick="iconButtonClicked(this)">
           <i class="fa-solid fa-eraser"><p class="smallp">0</p></i>
         </div>
         <div>
@@ -77,7 +77,8 @@
         </div>
       </div>
     </section>
-    <section class="main-section">
+    
+    <section class="main-section" id="middleLogo">
       <div class="internal-main-section">
         <div class="imgclass">
          <img
@@ -126,7 +127,7 @@
       <div class="left-side-box">
         <div class="left-footer">
           <div class="minus"><i class="fa-solid fa-minus"></i></div>
-          <div>140%</div>
+          <div>100%</div>
           <div class="plus"><i class="fa-solid fa-plus"></i></div>
         </div>
         <div class="second-left">
@@ -145,5 +146,14 @@
         </div>
       </div>
     </section>
+       <div class=" form hide">
+         <label for="strokeWidth">Stroke Width</label>
+         <input type="range" id="strokeWidth" min="3" max="10" oninput="onInput(this)">
+         <label for="colorPicker">Color Picker</label>
+         <input type="color" id="colorPicker" oninput="onInput(this)">
+       </div>
+       <canvas id="canvas"></canvas>
+    <script src="script.js"></script>
+    <script src="state.js"></script>
   </body>
 </html>
