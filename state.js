@@ -1,5 +1,5 @@
 const middlieNavbutton = document.querySelectorAll(".middle-nav-section>div");
-
+let middleOption = document.getElementById("middleLogo");
 let actions ={
     pencil:false,
     square:false,
@@ -10,7 +10,7 @@ let actions ={
 
 function iconButtonClicked(element){
      let  middleBtn = element.id;
-     
+     middleOption.style.display ="none";
      middlieNavbutton.forEach((divBtn)=>{
         if(divBtn.classList.contains("active-class")  && divBtn.id !== middleBtn){
             divBtn.classList.remove("active-class")
@@ -23,4 +23,5 @@ function iconButtonClicked(element){
         let isActive = divBtn.classList.contains("active-class");
         actions[divBtn.id] = isActive;
      })
+   
 }

@@ -6,11 +6,7 @@
     <title>Excalidraw</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="canvas.css">
-    <link
-      rel="icon"
-      href="https://docs.excalidraw.com/img/logo.svg"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -24,7 +20,7 @@
   </head>
   <body>
     <section class="nav-section">
-      <div class="left-menu">
+      <div class="left-menu" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="middle-nav-section"  >
@@ -148,12 +144,13 @@
     </section>
        <div class=" form hide">
          <label for="strokeWidth">Stroke Width</label>
-         <input type="range" id="strokeWidth" min="3" max="10" oninput="onInput(this)">
-         <label for="colorPicker">Color Picker</label>
-         <input type="color" id="colorPicker" oninput="onInput(this)">
+         <input type="range"name="strokewidth"  min="3" max="10" oninput="onInput(this)">
+         <label for="strokestyle">Color Picker</label>
+         <input type="color" name="strokestyle"  oninput="onInput(this)">
        </div>
        <canvas id="canvas"></canvas>
     <script src="script.js"></script>
     <script src="state.js"></script>
+    <script src="drawing.js"></script>
   </body>
 </html>
